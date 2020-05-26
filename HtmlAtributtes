@@ -1,0 +1,45 @@
+public  function __construct (array $attributes =[])
+{
+    $this->attributes = new HtmlAttributes($attributes);
+     $this->attributes = $attributes;
+     $this->htmlAttributes = new HtmlAttributes($attributes);
+
+}
+
+
+$this->getAttributes()[$attribute]
+
+protected function getAttributes()
+{
+     return $this->attributes->attributes;
+}
+
+------------------------------------------------------
+
+class HtmlAttributes implements \ArrayAccess
+{
+
+public $attributtes;
+
+public function __construct(array $attributes =[])
+{
+    $this->attributes = $attributes;
+}
+
+public function offsetGet($offset)
+{
+    return $this->attributes[$offset];
+}
+
+
+}
+
+
+HTMLAttributes 
+
+ public function render(): string
+    {
+        return array_reduce(array_keys($this->attributes), function ($result, $attribute) {
+            return $result . $this->renderAttribute($attribute);
+        }, '');
+    }
