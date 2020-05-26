@@ -1,0 +1,10 @@
+{
+    "name": "hugoberpar/01estructura-basica",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
